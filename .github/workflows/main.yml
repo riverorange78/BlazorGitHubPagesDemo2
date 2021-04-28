@@ -19,6 +19,10 @@ jobs:
       with:
         dotnet-version: 3.1
 
+        # Run tests
+    - name: Test
+      run: dotnet test
+ 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
       run: dotnet publish BlazorGitHubPagesDemo2.csproj -c Release -o release --nologo
